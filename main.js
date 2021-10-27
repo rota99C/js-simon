@@ -15,8 +15,8 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 //creo un array dove salvo i numeri random
 
 let numeri = []
-while (numeri.length <= 5) {
-    let random = Math.floor(math.random() * 10)
+while (numeri.length < 5) {
+    let random = Math.floor(MATH.random() * 10)
     if (numeri.includes(random)) {
         numeri.push(random)
     }
