@@ -17,7 +17,7 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 let numeri = []
 while (numeri.length < 5) {
     let random = Math.floor(Math.random() * 10)
-    if (numeri.includes(random)) {
+    if (!numeri.includes(random)) {
         numeri.push(random)
     }
 }
@@ -25,19 +25,18 @@ while (numeri.length < 5) {
 
 //messaggio allert
 
-let messaggio = alert("ciao , memorizza bene questi numeri che ho gnerato + 'numeri'  Poi ti dirò quanti ne hai indovinati")
+let messaggio = alert('ciao , memorizza bene questi numeri che ho gnerato ' + numeri + '  Poi ti dirò quanti ne hai indovinati')
 
 //una variabile dove inserisco i nuemri inseriti
 let backupNumeri = []
 
 setTimeout(function () {
-    for (let index = 0; index < 5; i++) {
+    for (let index = 0; index < 5; index++) {
         //domanda all'utente
         let risposta = parseInt(prompt("dimmi che numeri ricordi"));
         if (numeri.includes(risposta)) {
             backupNumeri.push(risposta);
         }
     }
-
-    let finale = alert("hai indovinato + 'risposta.lenght ")
-})
+    let finale = alert('hai indovinato ' + backupNumeri.length)
+}, 1000)
